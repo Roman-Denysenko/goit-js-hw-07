@@ -26,3 +26,17 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+
+const galleryRef = document.querySelector(`#gallery`);
+
+const makesGalleryPicture = ({ url, alt }) =>
+  `<li> <img  src="${url}" alt ="${alt}" width = 200> </li>`;
+
+const resultStringGallery = images.map(makesGalleryPicture).join(``);
+
+galleryRef.insertAdjacentHTML(`afterbegin`, resultStringGallery);
+
+galleryRef.classList.add(`gallery-style`);
+
+galleryRef.style.display = `flex`;
+galleryRef.style.listStyleType = `none`;
