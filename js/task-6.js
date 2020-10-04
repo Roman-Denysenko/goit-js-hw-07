@@ -33,6 +33,6 @@ function onСhecksValidInput(event) {
   const validLength = Number(event.currentTarget.dataset.length);
 
   lengthValueInput < validLength
-    ? inputRef.classList.add(`invalid`)
-    : inputRef.classList.add(`valid`);
+    ? inputRef.classList.add(`invalid`) || inputRef.classList.remove(`valid`)
+    : inputRef.classList.add(`valid`) || inputRef.classList.remove(`invalid`);
 }
