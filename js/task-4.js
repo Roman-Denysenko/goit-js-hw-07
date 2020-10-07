@@ -9,8 +9,7 @@
 //   <span id="value">0</span>
 //   <button type="button" data-action="increment">+1</button>
 // </div>
-
-const counterValue = document.querySelector(`#value`);
+const valueRef = document.querySelector(`#value`);
 
 const btnIncrementRef = document.querySelector(
   `#counter [data-action="increment"]`
@@ -18,6 +17,9 @@ const btnIncrementRef = document.querySelector(
 const btnDecrementRef = document.querySelector(
   `#counter [data-action="decrement"]`
 );
+
+let counterValue = 0;
+counterValue = valueRef;
 
 let value = 0;
 counterValue.textContent = value;
