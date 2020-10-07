@@ -32,7 +32,7 @@ function onСhecksValidInput(event) {
   const lengthValueInput = event.currentTarget.value.length;
   const validLength = Number(event.currentTarget.dataset.length);
 
-  lengthValueInput < validLength
-    ? inputRef.classList.add(`invalid`) || inputRef.classList.remove(`valid`)
-    : inputRef.classList.add(`valid`) || inputRef.classList.remove(`invalid`);
+  lengthValueInput === validLength
+    ? inputRef.classList.add(`valid`) || inputRef.classList.remove(`invalid`)
+    : inputRef.classList.add(`invalid`) || inputRef.classList.remove(`valid`);
 }
